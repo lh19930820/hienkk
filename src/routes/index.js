@@ -1,12 +1,20 @@
-import NotFound from 'components/not-found/NotFound';
-import Home from 'pages/home/Home';
+import NotFound from 'pages/not-found/NotFound';
 import Post from 'pages/post/Post';
+import Blogs from 'pages/blogs/Blogs';
+import {
+	Navigate
+} from 'react-router-dom';
 
 const routes = [
 	{
 		path: '/',
 		exact: true,
-		component: Home
+		component: <Navigate to='/blogs' replace />
+	},
+	{
+		path: '/blogs',
+		exact: true,
+		component: <Blogs/>
 	},
 	{
 		path: '/blog/:id',
@@ -17,7 +25,7 @@ const routes = [
 	{
 		path: '*',
 		exact: false,
-		component: NotFound
+		component: <NotFound/>
 	}
 ];
 

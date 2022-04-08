@@ -1,0 +1,54 @@
+.form-post{
+    border: solid 1px #ddd
+}
+.img-upload{
+    width: 98px;
+    height: 130px;
+    position: relative;
+    border: solid 1px #ddd;
+    img{
+        width: 64px;
+        height: 64px;
+        object-fit: covers;
+    }
+    &__label{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        padding-top: 90px;
+        text-align: center;
+        z-index: 2;
+        cursor: pointer;
+        &:hover{
+            opacity: 0.9;
+            &::after{
+                transform: scale(1);
+                transition-duration: 0.2s;
+            }
+        }
+        &::after{
+            transform: scale(0);
+            transition-duration: 0.2s;
+            content: '';
+            position: absolute;
+            bottom:  0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(147 128 254 / 30%) url('../../../assets/images/edit-2.svg') center center no-repeat;
+            background-size: 24px 24px;
+            
+        }
+    }
+    &__input{
+        position: absolute;
+        left: -100px;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        z-index: -1;
+    }
+    
+}

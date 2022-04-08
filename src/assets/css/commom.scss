@@ -1,0 +1,12 @@
+#root{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+html,
+body{
+    height: 100%;
+}
+.l-main{
+    flex: 1
+}
