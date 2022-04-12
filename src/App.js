@@ -1,5 +1,6 @@
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import routes from './routes/index';
+
 import {
 	BrowserRouter,
 	Routes,

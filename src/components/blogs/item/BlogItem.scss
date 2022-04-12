@@ -16,6 +16,12 @@
             right: 15px;
         }
     }
+    &__content{
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
     &__img{
         width: 64px;
         height: 64px;

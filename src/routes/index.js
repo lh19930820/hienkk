@@ -12,7 +12,7 @@ const routes = [
 		component: <Navigate to='/blogs' replace />
 	},
 	{
-		path: '/blogs',
+		path: '/blogs/',
 		exact: true,
 		component: <Blogs/>
 	},
