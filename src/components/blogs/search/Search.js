@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
-const Search = ({ callback, searchTerm }) => {
+const Search = React.memo(({ callback, searchTerm }) => {
 	const [state, setState] = useState(searchTerm);
 	const timeOut = useRef(null);
 
@@ -25,9 +25,10 @@ const Search = ({ callback, searchTerm }) => {
 				value={state}/>
 		</div>
 	);
-};
+});
 Search.propTypes = {
 	callback: PropTypes.func,
 	searchTerm: PropTypes.string
 };
+Search.displayName = 'Search';
 export default Search;
